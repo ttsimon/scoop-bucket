@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ttsimon/cc-run/releases/download/v0.1.0/ccr_windows_amd64.zip",
+            "bin": [
+                "ccr.exe"
+            ],
+            "hash": "43da8eb2d8b1bbe445c90458e39aed16050bf4a7eefbe1a91f39a1dd2ec0386a"
+        },
+        "arm64": {
+            "url": "https://github.com/ttsimon/cc-run/releases/download/v0.1.0/ccr_windows_arm64.zip",
+            "bin": [
+                "ccr.exe"
+            ],
+            "hash": "4bceb698094beb2729c4cc2d64ddf29cc95ad21068e325a6e4f43f428196a627"
+        }
+    },
+    "homepage": "https://github.com/ttsimon/cc-run",
+    "license": "MIT",
+    "description": "用选定 provider 的环境变量启动 claude，可同时多开、各用不同后端"
+}
