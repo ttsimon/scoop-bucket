@@ -1,22 +1,25 @@
 {
-    "version": "0.1.0",
+    "version": "0.2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ttsimon/cc-run/releases/download/v0.1.0/ccr_windows_amd64.zip",
+            "url": "https://github.com/ttsimon/cc-run/releases/download/v0.2.0/ccr_windows_amd64.zip",
             "bin": [
                 "ccr.exe"
             ],
-            "hash": "43da8eb2d8b1bbe445c90458e39aed16050bf4a7eefbe1a91f39a1dd2ec0386a"
+            "hash": "1e067b96333c9d30049cdcd53fce5fb82465071804e72e0edc7528f13adcb5f7"
         },
         "arm64": {
-            "url": "https://github.com/ttsimon/cc-run/releases/download/v0.1.0/ccr_windows_arm64.zip",
+            "url": "https://github.com/ttsimon/cc-run/releases/download/v0.2.0/ccr_windows_arm64.zip",
             "bin": [
                 "ccr.exe"
             ],
-            "hash": "4bceb698094beb2729c4cc2d64ddf29cc95ad21068e325a6e4f43f428196a627"
+            "hash": "d5faf4003d9f7e875253cab08032e85ebd65e1391f8b52e09cff16b84b855cdb"
         }
     },
     "homepage": "https://github.com/ttsimon/cc-run",
     "license": "MIT",
-    "description": "用选定 provider 的环境变量启动 claude，可同时多开、各用不同后端"
+    "description": "用选定 provider 的环境变量启动 claude，可同时多开、各用不同后端",
+    "post_install": [
+        "if (Get-Command ccr -ErrorAction SilentlyContinue) { ccr completion install powershell *\u003e $null }"
+    ]
 }
